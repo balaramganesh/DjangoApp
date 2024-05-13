@@ -4,6 +4,8 @@ from .forms import UserInputForm
 
 # Create your views here.from django.http import HttpResponse
 
+def homepage(request):
+    return HttpResponse("Hello, world. You're at the home page. Welcome!")
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")

@@ -13,7 +13,8 @@ def input_order(request) :
             # text_input = form.cleaned_data['text_input']
             # UserInput.objects.create(text_input=text_input)
             form.instance.save(using='mysql')
-            return redirect('success_page')
+            # return redirect('success_page')
+            return render(request,'order_result.html',{'form':form})
     else :
         form = OrdersForm()
 
